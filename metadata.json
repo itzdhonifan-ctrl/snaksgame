@@ -1,0 +1,6 @@
+{
+  "name": "Neon Synth Snake",
+  "description": "A cyberpunk-themed Snake game fused with a synthwave music player. Play Snake in a neon-lit arena while cruising through AI-generated dummy tracks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

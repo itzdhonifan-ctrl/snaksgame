@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Inter:wght@400;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Inter", "Arial Black", sans-serif;
+  --font-mono: "Courier Prime", "Courier New", Courier, monospace;
+  
+  --color-neon-green: #39FF14;
+  --color-neon-red: #FF3131;
+}
+
+@layer base {
+  body {
+    @apply bg-[#050505] text-[#E0E0E0] overflow-hidden;
+  }
+}
+
+@layer utilities {
+  .f-display {
+    font-family: var(--font-display);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+  }
+  .f-mono {
+    font-family: var(--font-mono);
+  }
+  .neon-green {
+    color: var(--color-neon-green);
+  }
+  .neon-border {
+    border: 1px solid var(--color-neon-green);
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.15);
+  }
+  .neon-bg {
+    background-color: var(--color-neon-green);
+  }
+  .grid-dot {
+    background-image: radial-gradient(rgba(57, 255, 20, 0.15) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+.animate-glitch {
+  animation: glitch 1s linear infinite;
+}
